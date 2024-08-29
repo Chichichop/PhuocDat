@@ -1,0 +1,232 @@
+header {
+    background-image: url("/jpg/red.png"); /* Màu nền của header */
+    padding: 10px;
+    color: white;
+    display: flex;
+    align-items: flex-start; /* Căn chỉnh các phần tử theo chiều dọc từ đầu */
+    position: relative;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column; /* Xếp các phần tử theo chiều dọc */
+    align-items: flex-start; /* Căn chỉnh các phần tử về phía bên trái */
+    margin-right: auto; /* Đẩy các phần tử về bên trái */
+    transition: margin 0.5s ease, text-align 0.5s ease;
+   
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.7em; /* Kích cỡ chữ tiêu đề lớn hơn 50% */
+    color: #f1ff2d; /* Màu chữ tiêu đề thành vàng sáng */
+    margin-left: 8.0em;
+    transform: translateY(-2cm);
+}
+
+.logo {
+    width: 80px; /* Đặt kích thước logo */
+    height: auto;
+    margin-right: 900px; /* Khoảng cách giữa logo và tiêu đề */
+    margin-bottom: -0.2cm;
+    
+}
+
+
+
+.address {
+    margin: 0; /* Xóa khoảng cách xung quanh địa chỉ */
+    color: white; /* Màu chữ địa chỉ thành trắng */
+    font-size: 1.3em; /* Kích cỡ chữ địa chỉ */
+    font-weight: bold; /* Đổi chữ thành đậm */
+    margin-left: 5.8em;
+    transform: translateY(-2cm);
+}
+
+.telephone {
+    margin: 0; /* Xóa khoảng cách xung quanh số điện thoại */
+    color: white; /* Màu chữ số điện thoại thành trắng */
+    font-size: 1.3em; /* Kích cỡ chữ số điện thoại */
+    font-weight: bold; /* Đổi chữ thành đậm */
+    margin-left: 14.3em;
+    transform: translateY(-2cm);
+}
+
+.login {
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    width: 150px; /* Chiều rộng của form đăng nhập */
+    height: 90px;
+    font-size: 0.8em; /* Kích cỡ chữ nhỏ hơn tiêu chuẩn */
+    position: absolute;
+    top: 10px; /* Đặt form đăng nhập ở phía trên cùng của header */
+    right: 10px; /* Đặt form đăng nhập từ bên phải header */
+}
+
+.login form {
+    display: flex;
+    flex-direction: column; /* Xếp các phần tử trong form theo chiều dọc */
+}
+
+.login label {
+    margin-bottom: 3px;
+    font-weight: bold;
+    color: black; /* Màu chữ nhãn thành đen */
+}
+
+.login input {
+    margin-bottom: 5px;
+    padding: 5px;
+    font-size: 0.8em; /* Kích cỡ chữ trong trường nhập liệu nhỏ hơn tiêu chuẩn */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.login button {
+    padding: 5px;
+    background-color: #f7c331; /* Màu nền của nút đăng nhập */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.8em; /* Kích cỡ chữ trên nút nhỏ hơn tiêu chuẩn */
+}
+
+.login button:hover {
+    background-color: #e6b02b; /* Màu nền của nút khi di chuột qua */
+}
+
+main {
+    padding: 20px;
+}
+
+.price-table {
+    margin-top: 10px;
+    transform: translateY(-2cm);
+}
+
+.price-table table { 
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgb(255, 165, 165);
+    border: 3px ;
+    box-shadow: 0 0 10px rgb(255, 251, 0);
+    margin-top: -1cm;
+    
+}
+
+.price-table th, .price-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center; /* Căn giữa nội dung của các ô */
+  
+}
+
+.price-table th {
+    background-color: #fff200; /* Màu nền của tiêu đề cột */
+    color: rgb(214, 43, 43);
+    font-size: 2.0em;
+   
+}
+
+.price-table td {
+    background-color: #fff;
+   
+}
+
+.price-table td.type, .price-table td.buy-price, .price-table td.sell-price {
+    font-size: 2.0em; /* Kích cỡ chữ lớn hơn 50% */
+    font-weight: bold; /* Chữ đậm */
+    color: #003366; /* Màu chữ xanh nước biển */
+   
+}
+
+.price-table input {
+    width: 100%; /* Chiều rộng của trường nhập liệu chiếm toàn bộ ô */
+    box-sizing: border-box;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center; /* Căn giữa chữ trong trường nhập liệu */
+    font-size: 1.0em; /* Kích cỡ chữ trong trường nhập liệu */
+    font-weight: bold; /* Chữ đậm */
+    color: #f94d41; /* Màu chữ đỏ cam */
+  
+}
+
+#priceTable {
+    display: none; /* Ẩn bảng giá */
+}
+
+body{
+    background-image: url("/jpg/red.png");
+
+
+}
+/* Quy tắc bình thường */
+header h1, .address, .telephone {
+    margin: 0; /* Xóa khoảng cách xung quanh để căn giữa */
+    text-align: center; /* Căn giữa khi được kích hoạt */
+}
+
+/* Trạng thái bình thường */
+.header-content.center {
+    margin: 0 auto; /* Căn giữa toàn bộ khối */
+    align-items: center; /* Căn giữa các phần tử con */
+    text-align: center; /* Căn giữa nội dung */
+}
+
+/* Ẩn nền đăng nhập */
+.login.hidden {
+    display: none;
+}
+
+.datetime {
+    text-align: center; /* Căn giữa văn bản */
+    margin-right: 20.0cm ;
+    font-size: 1.0em; /* Kích thước chữ lớn hơn một chút */
+    color: #ffffff; /* Màu chữ xanh nước biển */
+    margin-bottom: 10px; /* Khoảng cách dưới để tách khỏi bảng giá */
+    font-weight: bold; /* Chữ đậm */
+    transform: translateY(-2cm);
+}
+
+.marquee {
+    width: 98%; /* Chiều rộng của khu vực chữ chạy */
+    overflow: hidden; /* Ẩn phần văn bản vượt ra ngoài khu vực */
+    position: relative; /* Đặt vị trí tương đối để điều chỉnh văn bản chạy */
+    background-color: #c2ff0c; /* Màu nền của khu vực chữ chạy */
+    padding: 10px; /* Khoảng cách bên trong khu vực chữ chạy */
+    margin-top: -1.6cm;
+}
+
+.marquee p {
+    position: absolute; /* Đặt vị trí tuyệt đối để di chuyển văn bản */
+    width: 100%; /* Chiều rộng của văn bản chạy */
+    height: auto; /* Chiều cao tự động */
+    white-space: nowrap; /* Không gãy dòng để văn bản chạy liên tục */
+    margin: 0; /* Xóa khoảng cách mặc định của đoạn văn */
+    transform: translateX(100%); /* Đặt văn bản bắt đầu từ bên phải */
+    animation: marquee 30s linear infinite; /* Áp dụng hiệu ứng chạy */
+    margin-top: -0.24cm;
+    font-weight: bold;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(100%); /* Bắt đầu từ bên phải */
+    }
+    to {
+        transform: translateX(-100%); /* Kết thúc ở bên trái */
+    }
+}
+
+.gold-chart {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

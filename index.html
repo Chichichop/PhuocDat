@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiệm Vàng Phước Đạt</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="/jpg/favicon-32x32.png" type="image/x-icon">
+
+</head>
+<body>
+    <header>
+        <div class="header-content">
+             <!-- Thêm class store-info để chứa các thông tin của cửa hàng -->
+             <img src="/jpg/logopd.png" alt="Logo" class="logo"> 
+             <div class="store-info">
+                 <h1>TIỆM VÀNG PHƯỚC ĐẠT</h1>
+                 <p class="address">50 Tổ 1 - Ấp Vàm Đầm - Xã Nguyễn Huân - Huyện Đầm Dơi - Tỉnh Cà Mau</p>
+                 <p class="telephone">SDT: 0828 927 020 - 0912 903 063</p>
+        </div>
+        <section class="login">
+            <form id="loginForm">
+                <label for="username">Tên đăng nhập:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Mật khẩu:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Đăng nhập</button>
+                <p id="loginMessage" style="color: red; display: none;">Tên đăng nhập hoặc mật khẩu không chính xác.</p>
+            </form>
+        </section>
+    </header>
+    <section class="datetime" id="datetime">
+    </section>
+    <main>
+        <section class="price-table" id="priceTable">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Loại Vàng</th>
+                        <th>Giá Mua</th>
+                        <th>Giá Bán</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="type">999</td>
+                        <td class="buy-price"><input type="number" id="buyPrice999" value="1000000" /></td>
+                        <td class="sell-price"><input type="number" id="sellPrice999" value="1050000" /></td>
+                    </tr>
+                    <tr>
+                        <td class="type">980</td>
+                        <td class="buy-price"><input type="number" id="buyPrice980" value="950000" /></td>
+                        <td class="sell-price"><input type="number" id="sellPrice980" value="1000000" /></td>
+                    </tr>
+                    <tr>
+                        <td class="type">960</td>
+                        <td class="buy-price"><input type="number" id="buyPrice960" value="900000" /></td>
+                        <td class="sell-price"><input type="number" id="sellPrice960" value="950000" /></td>
+                    </tr>
+                    <tr>
+                        <td class="type">610</td>
+                        <td class="buy-price"><input type="number" id="buyPrice610" value="800000" /></td>
+                        <td class="sell-price"><input type="number" id="sellPrice610" value="850000" /></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section class="marquee">
+            <p>KHÁCH HÀNG MUA BÁN , CẦM ĐỒ VUI LÒNG MANG THEO CĂN CƯỚC CÔNG DÂN </p>
+        </section>
+        
+    </main>
+    <section class="gold-chart">
+        <!-- TradingView Widget BEGIN -->
+        <div class="tradingview-widget-container">
+            <div id="tradingview_12345"></div>
+            <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+            <script type="text/javascript">
+            new TradingView.widget(
+            {
+                "width": "100%",
+                "height": 400,
+                "symbol": "TVC:GOLD",
+                "interval": "D",
+                "timezone": "Etc/UTC",
+                "theme": "light",
+                "style": "1",
+                "locale": "en",
+                "toolbar_bg": "#f1f3f6",
+                "enable_publishing": false,
+                "withdateranges": true,
+                "hide_side_toolbar": false,
+                "allow_symbol_change": true,
+                "container_id": "tradingview_12345"
+            }
+            );
+            </script>
+        </div>
+        <!-- TradingView Widget END -->
+    </section>
+    
+    <script src="script.js"></script>
+</body>
+</html>
