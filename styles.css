@@ -197,8 +197,8 @@ header h1, .address, .telephone {
     margin: 0; /* Xóa khoảng cách xung quanh để căn chính xác */
     padding: 0; /* Xóa khoảng cách bên trong nếu có */
     position: absolute; /* Đặt vị trí tuyệt đối để điều chỉnh */
-    top: 2.9cm; /* Căn chỉnh từ phía trên của phần tử chứa */
-    left: 0.8cm; /* Căn chỉnh từ phía trái của phần tử chứa */
+    top: 2.9cm !important; /* Căn chỉnh từ phía trên của phần tử chứa */
+    left: 0.8cm !important; /* Căn chỉnh từ phía trái của phần tử chứa */
     width: 100%; /* Đảm bảo phần tử chiếm toàn bộ chiều rộng của phần tử chứa */
     text-align: left; /* Căn chỉnh văn bản về phía bên trái */
 }
