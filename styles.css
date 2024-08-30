@@ -190,7 +190,7 @@ header h1, .address, .telephone {
 }
 
 .datetime {
-    text-align: center; /* Căn giữa văn bản */
+    /*text-align: center; /* Căn giữa văn bản */
     margin-right: 10.0cm ;
     font-size: 1.0em; /* Kích thước chữ lớn hơn một chút */
     color: #ffffff; /* Màu chữ xanh nước biển */
