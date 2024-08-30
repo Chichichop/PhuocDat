@@ -106,7 +106,7 @@ main {
 }
 
 .price-table {
-    margin-top: 20px;
+    margin-top: 10px;
     transform: translateY(-2cm);
 }
 
@@ -193,7 +193,7 @@ header h1, .address, .telephone {
 .datetime {
     position: relative !important; /* Đảm bảo thuộc tính position được áp dụng */
     top: -3.0cm !important; /* Đảm bảo datetime di chuyển lên */
-    left: 0.8cm !important; /* Đảm bảo datetime di chuyển qua bên phải */
+    left: 0.4cm !important; /* Đảm bảo datetime di chuyển qua bên phải */
     font-size: 1.0em;
     color: #ffffff;
     font-weight: bold;
