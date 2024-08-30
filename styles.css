@@ -191,13 +191,14 @@ header h1, .address, .telephone {
 }
 
 .datetime {
-    position: relative; /* Để datetime nằm trên bảng giá mà không ảnh hưởng đến bố cục của các phần tử khác */
-    top: -2.5cm; /* Thụt lên 2.5cm từ vị trí ban đầu */
-    left: 1cm; /* Di chuyển qua bên phải 1cm */
-    font-size: 1.0em; /* Kích thước chữ */
-    color: #ffffff; /* Màu chữ */
-    font-weight: bold; /* Chữ đậm */
+    position: relative !important; /* Đảm bảo thuộc tính position được áp dụng */
+    top: -2.5cm !important; /* Đảm bảo datetime di chuyển lên */
+    left: 1cm !important; /* Đảm bảo datetime di chuyển qua bên phải */
+    font-size: 1.0em;
+    color: #ffffff;
+    font-weight: bold;
 }
+
 
 .marquee {
     width: 98%; /* Chiều rộng của khu vực chữ chạy */
