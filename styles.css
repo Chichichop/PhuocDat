@@ -21,6 +21,7 @@ header h1 {
     font-size: 2.7em; /* Kích cỡ chữ tiêu đề lớn hơn 50% */
     color: #f1ff2d; /* Màu chữ tiêu đề thành vàng sáng */
     margin-left: 8.0em;
+    transform: translateY(-2cm);
   
 }
 
@@ -40,6 +41,7 @@ header h1 {
     font-size: 1.3em; /* Kích cỡ chữ địa chỉ */
     font-weight: bold; /* Đổi chữ thành đậm */
     margin-left: 5.8em;
+    transform: translateY(-2cm);
     
 }
 
@@ -49,6 +51,7 @@ header h1 {
     font-size: 1.3em; /* Kích cỡ chữ số điện thoại */
     font-weight: bold; /* Đổi chữ thành đậm */
     margin-left: 14.3em;
+    transform: translateY(-2cm);
     
 }
 
@@ -164,7 +167,7 @@ body{
     background-image: url("./jpg/red.png");
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;    
+       
 
 
 }
