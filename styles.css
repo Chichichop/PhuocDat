@@ -197,6 +197,7 @@ header h1, .address, .telephone {
     margin-bottom: 10px; /* Khoảng cách dưới để tách khỏi bảng giá */
     font-weight: bold; /* Chữ đậm */
     transform: translateY(-2cm);
+    margin-left: -2cm;
 }
 
 .marquee {
