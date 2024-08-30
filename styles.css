@@ -192,8 +192,8 @@ header h1, .address, .telephone {
 
 .datetime {
     position: relative !important; /* Đảm bảo thuộc tính position được áp dụng */
-    top: -2.5cm !important; /* Đảm bảo datetime di chuyển lên */
-    left: 1cm !important; /* Đảm bảo datetime di chuyển qua bên phải */
+    top: -3.0cm !important; /* Đảm bảo datetime di chuyển lên */
+    left: 0.8cm !important; /* Đảm bảo datetime di chuyển qua bên phải */
     font-size: 1.0em;
     color: #ffffff;
     font-weight: bold;
