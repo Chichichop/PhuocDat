@@ -1,3 +1,4 @@
+
 header {
     background-image: url("./jpg/red.png"); /* Màu nền của header */
     padding: 10px;
@@ -104,9 +105,8 @@ header h1 {
 main {
     padding: 20px;
 }
-
 .price-table {
-    margin-top: 10px;
+    padding-top: 1cm;
     transform: translateY(-2cm);
 }
 
@@ -191,12 +191,13 @@ header h1, .address, .telephone {
 }
 
 .datetime {
-    top: -1.0cm !important; /* Đảm bảo datetime di chuyển lên */
-    left: 0.4cm !important; /* Đảm bảo datetime di chuyển qua bên phải */
+    position: absolute; /* Đặt vị trí tuyệt đối để điều chỉnh */
     font-size: 1.0em;
     color: #ffffff;
     font-weight: bold;
-    margin-left: auto;
+    margin-top: -100px;
+    z-index: 10;
+   
 }
 
 

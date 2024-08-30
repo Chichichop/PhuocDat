@@ -48,6 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
 // Lấy tất cả các trường giá từ Local Storage khi trang tải
 window.onload = function() {
     const buyPrice999 = localStorage.getItem('buyPrice999');
