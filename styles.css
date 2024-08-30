@@ -106,7 +106,7 @@ main {
 }
 
 .price-table {
-    margin-top: 10px;
+    margin-top: 30px;
     transform: translateY(-2cm);
 }
 
@@ -130,7 +130,7 @@ main {
 .price-table th {
     background-color: #fff200; /* Màu nền của tiêu đề cột */
     color: rgb(214, 43, 43);
-    font-size: 2.0em;
+    font-size: 2.0em; 
    
 }
 
@@ -161,7 +161,8 @@ main {
 
 #priceTable {
     display: none; /* Ẩn bảng giá */
-}
+} 
+
 
 body{
     background-image: url("./jpg/red.png");
@@ -190,14 +191,16 @@ header h1, .address, .telephone {
 }
 
 .datetime {
-    /*text-align: center; /* Căn giữa văn bản */
-    margin-right: 10.0cm ;
     font-size: 1.0em; /* Kích thước chữ lớn hơn một chút */
-    color: #ffffff; /* Màu chữ xanh nước biển */
-    margin-bottom: 10px; /* Khoảng cách dưới để tách khỏi bảng giá */
+    color: #ffffff; /* Màu chữ trắng */
     font-weight: bold; /* Chữ đậm */
-    /*transform: translateY(-2cm);*/
-    
+    margin: 0; /* Xóa khoảng cách xung quanh để căn chính xác */
+    padding: 0; /* Xóa khoảng cách bên trong nếu có */
+    position: absolute; /* Đặt vị trí tuyệt đối để điều chỉnh */
+    top: 2.9cm; /* Căn chỉnh từ phía trên của phần tử chứa */
+    left: 0.8cm; /* Căn chỉnh từ phía trái của phần tử chứa */
+    width: 100%; /* Đảm bảo phần tử chiếm toàn bộ chiều rộng của phần tử chứa */
+    text-align: left; /* Căn chỉnh văn bản về phía bên trái */
 }
 
 .marquee {
