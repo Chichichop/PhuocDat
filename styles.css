@@ -191,13 +191,12 @@ header h1, .address, .telephone {
 }
 
 .datetime {
-    font-size: 1.0em; /* Kích thước chữ lớn hơn một chút */
-    color: #ffffff; /* Màu chữ trắng */
+    position: relative; /* Để datetime nằm trên bảng giá mà không ảnh hưởng đến bố cục của các phần tử khác */
+    top: -2.5cm; /* Thụt lên 2.5cm từ vị trí ban đầu */
+    left: 1cm; /* Di chuyển qua bên phải 1cm */
+    font-size: 1.0em; /* Kích thước chữ */
+    color: #ffffff; /* Màu chữ */
     font-weight: bold; /* Chữ đậm */
-    margin: 0; /* Xóa khoảng cách xung quanh để căn chính xác */
-    top: 4.5cm ; /* Căn chỉnh từ phía trên của phần tử chứa */
-    left: 0.8cm ; /* Căn chỉnh từ phía trái của phần tử chứa */
-    text-align: left; /* Căn chỉnh văn bản về phía bên trái */
 }
 
 .marquee {
