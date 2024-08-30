@@ -196,7 +196,7 @@ header h1, .address, .telephone {
     color: #ffffff; /* Màu chữ xanh nước biển */
     margin-bottom: 10px; /* Khoảng cách dưới để tách khỏi bảng giá */
     font-weight: bold; /* Chữ đậm */
-    transform: translateY(-2cm);
+    /*transform: translateY(-2cm);*/
     
 }
 
