@@ -106,8 +106,8 @@ main {
     padding: 20px;
 }
 .price-table {
-    padding-top: 1cm;
-    transform: translateY(-2cm);
+    top:-2.4cm;
+    position: relative;
 }
 
 .price-table table { 
@@ -191,12 +191,14 @@ header h1, .address, .telephone {
 }
 
 .datetime {
-    position: absolute; /* Đặt vị trí tuyệt đối để điều chỉnh */
+     /* Đặt vị trí tuyệt đối để điều chỉnh */
+    position: relative;
     font-size: 1.0em;
     color: #ffffff;
     font-weight: bold;
-    top: 3cm;
-    z-index: 10;
+    top: -90px;
+    left: -380px;
+   
    
 }
 
@@ -207,7 +209,7 @@ header h1, .address, .telephone {
     position: relative; /* Đặt vị trí tương đối để điều chỉnh văn bản chạy */
     background-color: #c2ff0c; /* Màu nền của khu vực chữ chạy */
     padding: 10px; /* Khoảng cách bên trong khu vực chữ chạy */
-    margin-top: -1.6cm;
+    top: -2cm;
 }
 
 .marquee p {
@@ -218,7 +220,7 @@ header h1, .address, .telephone {
     margin: 0; /* Xóa khoảng cách mặc định của đoạn văn */
     transform: translateX(100%); /* Đặt văn bản bắt đầu từ bên phải */
     animation: marquee 30s linear infinite; /* Áp dụng hiệu ứng chạy */
-    margin-top: -0.24cm;
+    margin-top: -0.18cm;
     font-weight: bold;
 }
 
