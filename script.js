@@ -24,8 +24,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const password = document.getElementById('password').value;
 
         // Tài khoản ví dụ
-        const validUsername = 'admin';
-        const validPassword = 'password123';
+        const validUsername = 'phuocdat';
+        const validPassword = 'admin687294';
 
         if (username === validUsername && password === validPassword) {
             priceTable.style.display = 'block'; // Hiển thị bảng giá
