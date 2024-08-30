@@ -40,7 +40,7 @@ header h1 {
     font-size: 1.3em; /* Kích cỡ chữ địa chỉ */
     font-weight: bold; /* Đổi chữ thành đậm */
     margin-left: 5.8em;
-    transform: translateY(-2cm);
+    
 }
 
 .telephone {
@@ -49,7 +49,7 @@ header h1 {
     font-size: 1.3em; /* Kích cỡ chữ số điện thoại */
     font-weight: bold; /* Đổi chữ thành đậm */
     margin-left: 14.3em;
-    transform: translateY(-2cm);
+    
 }
 
 .login {
@@ -161,7 +161,10 @@ main {
 }
 
 body{
-    background-image: url("/jpg/red.png");
+    background-image: url("./jpg/red.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;    
 
 
 }
