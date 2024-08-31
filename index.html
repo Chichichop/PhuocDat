@@ -6,9 +6,34 @@
     <title>Tiệm Vàng Phước Đạt</title>
 </head>
 <body>
-    <!-- Nội dung HTML -->
+    <div class="header-content">
+        <h1>TIỆM VÀNG PHƯỚC ĐẠT</h1>
+        <p>Địa chỉ: [Địa chỉ]</p>
+        <p>Số điện thoại: [Số điện thoại]</p>
+    </div>
 
-    <!-- Import Firebase SDK -->
+    <div class="login">
+        <form id="loginForm">
+            <label for="username">Email:</label>
+            <input type="email" id="username" required>
+            <label for="password">Mật khẩu:</label>
+            <input type="password" id="password" required>
+            <button type="submit">Đăng nhập</button>
+        </form>
+        <div id="loginMessage" style="display:none;">Lỗi đăng nhập</div>
+    </div>
+
+    <div id="priceTable" style="display:none;">
+        <label for="buyPrice999">Giá mua 999:</label>
+        <input type="text" id="buyPrice999">
+        <label for="sellPrice999">Giá bán 999:</label>
+        <input type="text" id="sellPrice999">
+        <!-- Các trường giá khác -->
+        <button id="saveButton">Lưu</button>
+    </div>
+
+    <div id="datetime"></div>
+
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
         import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-analytics.js";
@@ -113,7 +138,7 @@
         }
 
         // Lắng nghe sự kiện khi gửi form đăng nhập
-        loginForm.addEventListener('submit', login);
+        document.getElementById('loginForm').addEventListener('submit', login);
 
         // Lắng nghe sự kiện để lưu giá
         document.getElementById('saveButton').addEventListener('click', writePriceData);
