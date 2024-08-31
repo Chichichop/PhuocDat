@@ -44,14 +44,15 @@
             </div>
             <section class="login">
                 <form id="loginForm">
-                    <label for="username">Tên đăng nhập:</label>
-                    <input type="text" id="username" name="username" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
                     <label for="password">Mật khẩu:</label>
                     <input type="password" id="password" name="password" required>
-                    <button type="submit">Đăng nhập</button>
+                    <button type="button" id="loginButton">Đăng nhập</button> <!-- Thay đổi type từ 'submit' thành 'button' -->
                     <p id="loginMessage" style="color: rgb(242, 255, 98); display: none;">Tên đăng nhập hoặc mật khẩu không chính xác.</p>
                 </form>
             </section>
+            
         </div>
     </header>   
     
