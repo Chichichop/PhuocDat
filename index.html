@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -7,32 +6,36 @@
     <title>Tiệm Vàng Phước Đạt</title>
     <link rel="stylesheet" href="styles.css" type="text/css">
     <link rel="icon" href="./jpg/favicon-32x32.png" type="image/x-icon">
-
 </head>
 
 <body>
     <header>
         <div class="header-content">
-             <!-- Thêm class store-info để chứa các thông tin của cửa hàng -->
-             <img src="./jpg/logopd.png" alt="Logo" class="logo"> 
-             <div class="store-info">
-                 <h1>TIỆM VÀNG PHƯỚC ĐẠT</h1>
-                 <p class="address">50 Tổ 1 - Ấp Vàm Đầm - Xã Nguyễn Huân - Huyện Đầm Dơi - Tỉnh Cà Mau</p>
-                 <p class="telephone">SDT: 0828 927 020 - 0912 903 063</p>
+            <div class="login-info">
+                <form id="loginForm">
+                    <label for="username">Tên đăng nhập:</label>
+                    <input type="text" id="username" name="username" required>
+                    <label for="password">Mật khẩu:</label>
+                    <input type="password" id="password" name="password" required>
+                    <button type="submit">Đăng nhập</button>
+                    <p id="loginMessage" style="color: red; display: none;">Tên đăng nhập hoặc mật khẩu không chính xác.</p>
+                </form>
+            </div>
+            <div class="header-info">
+                <img src="./jpg/logopd.png" alt="Logo" class="logo"> 
+                <div class="store-info">
+                    <h1>TIỆM VÀNG PHƯỚC ĐẠT</h1>
+                    <p class="address">50 Tổ 1 - Ấp Vàm Đầm - Xã Nguyễn Huân - Huyện Đầm Dơi - Tỉnh Cà Mau</p>
+                    <p class="telephone">SDT: 0828 927 020 - 0912 903 063</p>
+                    <p class="datetime" id="currentDateTime"></p>
+
+                    
+                       
+                </div>
+            </div>
         </div>
-        <section class="login">
-            <form id="loginForm">
-                <label for="username">Tên đăng nhập:</label>
-                <input type="text" id="username" name="username" required>
-                <label for="password">Mật khẩu:</label>
-                <input type="password" id="password" name="password" required>
-                <button type="submit">Đăng nhập</button>
-                <p id="loginMessage" style="color: red; display: none;">Tên đăng nhập hoặc mật khẩu không chính xác.</p>
-            </form>
-        </section>
     </header>
-    <section class="datetime" id="datetime">
-    </section>
+    
     <main>
         <section class="price-table" id="priceTable">
             <table>
@@ -67,11 +70,14 @@
                 </tbody>
             </table>
         </section>
+
+        
+
         <section class="marquee">
             <p>KHÁCH HÀNG MUA BÁN , CẦM ĐỒ VUI LÒNG MANG THEO CĂN CƯỚC CÔNG DÂN </p>
         </section>
-        
     </main>
+    
     <section class="gold-chart">
         <!-- TradingView Widget BEGIN -->
         <div class="tradingview-widget-container">
@@ -101,6 +107,7 @@
         <!-- TradingView Widget END -->
     </section>
     
-    <script src="script.js"></script>
+    <script src="script.js" type="module"></script>
+   
 </body>
 </html>
