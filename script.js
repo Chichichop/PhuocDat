@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const now = new Date();
         const formattedDate = now.toLocaleDateString('vi-VN', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
         const formattedTime = now.toLocaleTimeString('vi-VN');
-        datetimeElement.textContent = `Ngày: ${formattedDate}, Giờ: ${formattedTime}`; // Sửa dấu ngoặc kép
+        datetimeElement.textContent = `Ngày: ${formattedDate}, Giờ: ${formattedTime}`;
     }
 
     // Gọi hàm cập nhật thời gian khi tải trang
@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const validPassword = 'password123';
 
         if (username === validUsername && password === validPassword) {
+            // Không ẩn bảng giá nữa
             priceTable.style.display = 'block'; // Hiển thị bảng giá
             loginMessage.style.display = 'none'; // Ẩn thông báo lỗi
 
@@ -44,7 +45,8 @@ document.addEventListener('DOMContentLoaded', function() {
             setInterval(updateDatetime, 1000); // Cập nhật mỗi giây
         } else {
             loginMessage.style.display = 'block'; // Hiển thị thông báo lỗi
-            priceTable.style.display = 'none'; // Ẩn bảng giá
+            // Không ẩn bảng giá nữa
+            priceTable.style.display = 'none'; // Ẩn bảng giá nếu thông tin đăng nhập sai
         }
     });
 });
