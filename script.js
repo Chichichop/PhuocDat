@@ -1,12 +1,16 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-analytics.js";
+import { getDatabase, ref, set, get } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-database.js";
+import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-auth.js";
+
 document.addEventListener('DOMContentLoaded', function() {
     const loginForm = document.getElementById('loginForm');
     const priceTable = document.getElementById('priceTable');
     const loginMessage = document.getElementById('loginMessage');
-    const headerContent = document.querySelector('.header-content'); // Chọn tiêu đề và thông tin liên lạc
-    const loginSection = document.querySelector('.login'); // Chọn phần form đăng nhập
-    const datetimeElement = document.getElementById('datetime'); // Phần tử hiển thị thời gian và ngày tháng
+    const headerContent = document.querySelector('.header-content');
+    const loginSection = document.querySelector('.login');
+    const datetimeElement = document.getElementById('datetime');
 
-    // Cập nhật thời gian và ngày tháng
     function updateDatetime() {
         const now = new Date();
         const formattedDate = now.toLocaleDateString('vi-VN', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
@@ -14,11 +18,9 @@ document.addEventListener('DOMContentLoaded', function() {
         datetimeElement.textContent = `Ngày: ${formattedDate}, Giờ: ${formattedTime}`;
     }
 
-    // Gọi hàm cập nhật thời gian khi tải trang
     updateDatetime();
-    setInterval(updateDatetime, 1000); // Cập nhật mỗi giây
+    setInterval(updateDatetime, 1000);
 
-    // Khởi tạo Firebase
     const firebaseConfig = {
         apiKey: "AIzaSyB0Ksr9vDX7drpD8h7msR5E_bfa-ERHGfU",
         authDomain: "tiemvangphuocdat-8490c.firebaseapp.com",
@@ -34,7 +36,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const database = getDatabase(app);
     const auth = getAuth(app);
 
-    // Hàm ghi dữ liệu giá vào Firebase
     function writePriceData() {
         const prices = {
             buyPrice999: document.getElementById('buyPrice999').value,
@@ -56,7 +57,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
     }
 
-    // Hàm đọc dữ liệu giá từ Firebase
     function readPriceData() {
         const dbRef = ref(database, 'prices/');
         get(dbRef).then((snapshot) => {
@@ -78,50 +78,35 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Hàm xử lý đăng nhập
     function login(event) {
-        event.preventDefault(); // Ngăn chặn gửi form
+        event.preventDefault();
 
         const email = document.getElementById('username').value;
         const password = document.getElementById('password').value;
 
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
-                // Đăng nhập thành công
                 const user = userCredential.user;
                 console.log('Người dùng đã đăng nhập:', user);
 
-                // Hiển thị bảng giá
-                priceTable.style.display = 'block'; // Hiển thị bảng giá
-                loginMessage.style.display = 'none'; // Ẩn thông báo lỗi
-
-                // Ẩn form đăng nhập và nền của nó
+                priceTable.style.display = 'block';
+                loginMessage.style.display = 'none';
                 loginSection.classList.add('hidden');
-
-                // Căn giữa tiêu đề và thông tin liên lạc
                 headerContent.classList.add('center');
-
-                // Hiển thị thời gian và ngày tháng
                 datetimeElement.style.display = 'block';
 
-                // Đọc dữ liệu giá từ Firebase
                 readPriceData();
             })
             .catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
                 console.error('Lỗi đăng nhập:', errorCode, errorMessage);
-                loginMessage.style.display = 'block'; // Hiển thị thông báo lỗi
-                priceTable.style.display = 'none'; // Ẩn bảng giá nếu đăng nhập sai
+                loginMessage.style.display = 'block';
+                priceTable.style.display = 'none';
             });
     }
 
-    // Lắng nghe sự kiện khi gửi form đăng nhập
     loginForm.addEventListener('submit', login);
-
-    // Lắng nghe sự kiện để lưu giá
     document.getElementById('saveButton').addEventListener('click', writePriceData);
-
-    // Đọc dữ liệu giá khi trang tải
     readPriceData();
 });
