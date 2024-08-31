@@ -79,3 +79,35 @@ document.addEventListener('input', function(event) {
     }
 });
 
+// script.js
+
+// Ví dụ về cách sử dụng Firebase Realtime Database để đọc và ghi dữ liệu
+
+// Import the required functions from Firebase
+import { getDatabase, ref, set, get } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-database.js";
+
+const database = getDatabase();
+
+// Ví dụ: Ghi dữ liệu vào Firebase
+function writeUserData(userId, name, email) {
+  set(ref(database, 'users/' + userId), {
+    username: name,
+    email: email
+  });
+}
+
+// Ví dụ: Đọc dữ liệu từ Firebase
+function readUserData(userId) {
+  const dbRef = ref(database, 'users/' + userId);
+  get(dbRef).then((snapshot) => {
+    if (snapshot.exists()) {
+      console.log(snapshot.val());
+    } else {
+      console.log("No data available");
+    }
+  }).catch((error) => {
+    console.error(error);
+  });
+}
+
+
