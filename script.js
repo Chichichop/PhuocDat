@@ -12,7 +12,8 @@ const firebaseConfig = {
     storageBucket: "phuocdat-35f05.appspot.com",
     messagingSenderId: "755558027609",
     appId: "1:755558027609:web:ac11bae129942d41abbc48",
-    measurementId: "G-D9XT8RNJ55"
+    measurementId: "G-D9XT8RNJ55",
+    databaseURL: "https://phuocdat-35f05-default-rtdb.firebaseio.com/",
 };
 
 // Khởi tạo ứng dụng Firebase
@@ -21,7 +22,16 @@ const analytics = getAnalytics(app);
 const auth = getAuth(app);
 
 // Khởi tạo Firebase Realtime Database
-const database = getDatabase(app);
+const database = getDatabase(app); 
+console.log(database)
+const starCountRef = ref(database, "buyPrice");
+console.log(starCountRef)
+
+onValue(starCountRef, (snapshot) => {
+    const data = snapshot.val();
+    console.log(data)
+    
+  });
 
 // Hàm để cập nhật giá vàng trong Realtime Database
 function updateGoldPrice(type, buyPrice, sellPrice) {
@@ -41,9 +51,11 @@ function listenForGoldPriceChanges() {
                 document.getElementById(`buyPrice${type}`).value = data[type].buy;
                 document.getElementById(`sellPrice${type}`).value = data[type].sell;
             });
+            console.log(data)
         }
     });
 }
+
 
 // Gọi hàm lắng nghe khi trang được tải
 document.addEventListener('DOMContentLoaded', () => {
@@ -59,6 +71,10 @@ document.querySelectorAll('.buy-price input, .sell-price input').forEach(input =
         updateGoldPrice(type, buyPrice, sellPrice);
     });
 });
+
+
+
+
 
 // Hàm cập nhật ngày giờ
 function updateDateTime() {

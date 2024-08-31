@@ -20,11 +20,12 @@ header {
 }
 
 header h1 {
-    margin: 0;
+    position: relative;
     font-size: 2.7em; /* Kích cỡ chữ tiêu đề lớn hơn 50% */
     color: #f1ff2d; /* Màu chữ tiêu đề thành vàng sáng */
     /*margin-left: 8.0em; */ 
-    transform: translateY(-2cm);
+    left: -0.1cm;
+    top: -2cm;
   
 }
 
@@ -67,7 +68,7 @@ main {
 
 .price-table {
     position: relative;
-    top:-3.5cm;
+    top:-3.9cm;
 }
 
 .price-table table { 
@@ -146,13 +147,14 @@ header h1, .address, .telephone {
 
 .datetime {
     position: relative; /* Đặt vị trí tuyệt đối để điều chỉnh */
-    top: -2.5cm; /* Di chuyển lên trên 2cm */
-    left : -1.8cm;
+    top: -2.3cm; /* Di chuyển lên trên 2cm */
+    left : 10cm;
     font-size: 1.3em;
-    color: #ffffff;
+    color: #000000;
     font-weight: bold;
     background-color: #c2ff0c;
-    padding: 5px;
+    padding: 2px;
+    width: 18%;
 }
 
 .marquee {
@@ -161,7 +163,7 @@ header h1, .address, .telephone {
     position: relative; /* Đặt vị trí tương đối để điều chỉnh văn bản chạy */
     background-color: #c2ff0c; /* Màu nền của khu vực chữ chạy */
     padding: 20px; /* Khoảng cách bên trong khu vực chữ chạy */
-    top : -3cm;
+    top : -3.5cm;
 }
 
 .marquee p {
@@ -186,7 +188,7 @@ header h1, .address, .telephone {
 }
 
 .gold-chart {
-    margin-top: 20px;
+    margin-top: -120px;
     padding: 10px;
     background-color: #fff;
     border-radius: 10px;
