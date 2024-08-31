@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const now = new Date();
         const formattedDate = now.toLocaleDateString('vi-VN', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
         const formattedTime = now.toLocaleTimeString('vi-VN');
-        datetimeElement.textContent = Ngày: ${formattedDate}, Giờ: ${formattedTime};
+        datetimeElement.textContent = `Ngày: ${formattedDate}, Giờ: ${formattedTime}`; // Sửa dấu ngoặc kép
     }
 
     // Gọi hàm cập nhật thời gian khi tải trang
