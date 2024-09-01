@@ -226,3 +226,24 @@ header h1, .address, .telephone {
     font-size: 0.7em; /* Kích cỡ chữ nút nhỏ hơn */
     padding: 1px 5px; /* Padding nhỏ hơn */
 }
+
+ /* CSS cho biểu đồ Kitco */
+ .kitco-chart-container {
+    position: relative;
+    width: 100%;
+    height: 600px; /* Điều chỉnh chiều cao nếu cần */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden; /* Đảm bảo không có thanh cuộn */
+    background-color: #ddd;
+}
+.kitco-chart-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+.kitco-chart-header {
+    margin-bottom: 15px;
+    text-align: center;
+}
