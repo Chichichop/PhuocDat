@@ -121,7 +121,7 @@ main {
 }
 /* Khi khóa nhập liệu */
 .price-table input:disabled {
-    background-color: #f0f0f0; /* Màu nền khi khóa */
+    background-color: #ffffff; /* Màu nền khi khóa */
     cursor: not-allowed; /* Con trỏ chuột khi khóa */
 }
 
