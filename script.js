@@ -107,15 +107,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
 console.log(auth);
 
- // JavaScript có thể được sử dụng để thực hiện các chức năng bổ sung nếu cần
-        // Ví dụ: Cập nhật thông tin thời gian thực, xử lý sự kiện, v.v.
-        
-        // Bạn có thể thêm mã JavaScript ở đây nếu cần chức năng cụ thể
-        // Ví dụ, nếu bạn muốn tự động cập nhật thông tin hoặc làm mới trang
-        function refreshChart() {
-            const iframe = document.querySelector('.kitco-chart-container iframe');
-            iframe.src += ''; // Làm mới iframe để cập nhật nội dung
-        }
-
-        // Gọi hàm refreshChart mỗi 5 phút (300000 ms) nếu cần cập nhật tự động
-        setInterval(refreshChart, 300000);
+ 
