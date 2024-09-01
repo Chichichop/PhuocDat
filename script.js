@@ -152,3 +152,17 @@ onAuthStateChanged(auth, (user) => {
         document.getElementById('loginForm').style.display = 'block'; // Hiện form đăng nhập
     }
 });
+
+
+
+// Sự kiện click vào logo để reset trạng thái về trước khi đăng nhập
+document.getElementById('logo').addEventListener('click', () => {
+    // Khóa các ô nhập liệu
+    toggleInputFields(false);
+
+    // Hiển thị lại form đăng nhập
+    document.getElementById('loginForm').style.display = 'block';
+
+    // Xóa thông báo lỗi đăng nhập (nếu có)
+    document.getElementById('loginMessage').style.display = 'none';
+});
