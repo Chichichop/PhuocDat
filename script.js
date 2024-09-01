@@ -154,27 +154,3 @@ onAuthStateChanged(auth, (user) => {
 });
 
 
-
-document.addEventListener('DOMContentLoaded', () => {
-    // Sự kiện click vào logo để reset trạng thái về trước khi đăng nhập
-    const logo = document.getElementById('logo');
-    if (logo) {  // Kiểm tra xem phần tử logo có tồn tại không
-        logo.addEventListener('click', () => {
-            // Khóa các ô nhập liệu
-            toggleInputFields(false);
-
-            // Hiển thị lại form đăng nhập
-            document.getElementById('loginForm').style.display = 'block';
-
-            // Xóa thông báo lỗi đăng nhập (nếu có)
-            document.getElementById('loginMessage').style.display = 'none';
-
-            // Đăng xuất người dùng khỏi Firebase Auth
-            auth.signOut().then(() => {
-                console.log('Đã đăng xuất');
-            }).catch((error) => {
-                console.error('Lỗi khi đăng xuất:', error);
-            });
-        });
-    }
-});
