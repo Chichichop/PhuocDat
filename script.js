@@ -3,6 +3,9 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/fireba
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-analytics.js";
 import { getAuth } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-auth.js";
 import { getDatabase, ref, set, onValue } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-database.js";
+//01/09/2024
+import { signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-auth.js";
+
 
 // Cấu hình Firebase
 const firebaseConfig = {
@@ -73,9 +76,6 @@ document.querySelectorAll('.buy-price input, .sell-price input').forEach(input =
 });
 
 
-
-
-
 // Hàm cập nhật ngày giờ
 function updateDateTime() {
     const now = new Date();
@@ -107,4 +107,48 @@ document.addEventListener('DOMContentLoaded', () => {
 
 console.log(auth);
 
- 
+
+
+
+//10:27 01/09/2024
+function toggleInputFields(isEnabled) {
+    const inputs = document.querySelectorAll('.price-table input');
+    inputs.forEach(input => {
+        input.disabled = !isEnabled;
+    });
+}
+
+// Xử lý việc đăng nhập
+document.getElementById('loginForm').addEventListener('submit', (event) => {
+    event.preventDefault(); // Ngăn chặn hành động mặc định của form
+    const email = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+            // Đăng nhập thành công
+            const user = userCredential.user;
+            console.log("Đăng nhập thành công:", user);
+            toggleInputFields(true); // Mở khóa các trường nhập liệu
+            document.getElementById('loginForm').style.display = 'none'; // Ẩn form đăng nhập
+        })
+        .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            document.getElementById('loginMessage').style.display = 'block'; // Hiện thông báo lỗi
+            console.error("Lỗi đăng nhập:", errorCode, errorMessage);
+        });
+});
+
+// Kiểm tra trạng thái đăng nhập
+onAuthStateChanged(auth, (user) => {
+    if (user) {
+        // Người dùng đã đăng nhập
+        toggleInputFields(true); // Mở khóa các trường nhập liệu
+        document.getElementById('loginForm').style.display = 'none'; // Ẩn form đăng nhập
+    } else {
+        // Người dùng chưa đăng nhập
+        toggleInputFields(false); // Khóa các trường nhập liệu
+        document.getElementById('loginForm').style.display = 'block'; // Hiện form đăng nhập
+    }
+});

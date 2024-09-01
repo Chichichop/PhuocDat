@@ -119,10 +119,18 @@ main {
     color: #f94d41; /* Màu chữ đỏ cam */
   
 }
+/* Khi khóa nhập liệu */
+.price-table input:disabled {
+    background-color: #f0f0f0; /* Màu nền khi khóa */
+    cursor: not-allowed; /* Con trỏ chuột khi khóa */
+}
 
-#priceTable {
-    display: block; /* Ẩn bảng giá */
-} 
+
+.price-table {
+    display: block; /* Hiển thị bảng giá */
+}
+
+
 
 body{
     background-image: url("./jpg/red.png");
