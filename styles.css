@@ -187,9 +187,9 @@ header h1, .address, .telephone {
     }
 }
 
-.gold-chart {
-    margin-top: -120px;
-    padding: 10px;
+.banggia-thamkhao {
+    position: relative;
+    top : -4cm;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
